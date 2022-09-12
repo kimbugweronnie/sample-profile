@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ronnie</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Candara">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Candara", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Ronnie Kimbugwe</b></h1>
+  <p>"Creating Solution Through Code"</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    
+    <div class="w3-container">
+      <h3><b>ABOUT ME</b></h3>
+      <h5>Who is Ronnie Kimbugwe </h5> <span class="w3-opacity" id="today"></span>
+    </div>
+    <script>
+      const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"
+];
+      var d = new Date();
+      var today = new Date()
+      var year = today.getFullYear();
+      var month = monthNames[today.getMonth()];
+      let dd = today.getDate();
+      const formattedToday = dd+ ' ' + month + ',' + year;
+      document.getElementById('today').innerHTML = formattedToday ;
+  </script>
+    <div class="w3-container">
+      <p>I am a Ugandan software developer and an aspiring blockchain developer.I love code,rather what can i do with it.It the learning
+        and mentorship to keeps me agitated for more.
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p> <a href='https://www.linkedin.com/in/kimbugwe-ronnie-57386a107'><button class="w3-button w3-padding-large w3-white w3-border"><b>Check Me Out »</b></button></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Project Estimation System API</b></h3>
+    </div>
+    
+
+    <div class="w3-container">
+      <p>An api to be consumed to enable developer estimate time for the tasks that are derived from 
+        features that gotten from the projects that they are attached to
+      </p>
+      <h5><span class="w3-opacity" id="start"></span></h5>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><a href='https://github.com/kimbugweronnie/EstimationApi-Clone'><button class="w3-button w3-padding-large w3-white w3-border"><b>Github Repo »</b></button></a></p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Other Projects </h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      
+      <li class="w3-padding-16">
+        <a href='https://github.com/kimbugweronnie/EstimationApi-Clone'>
+        <span class="w3-large">Toyota Uganda Tool</span><br>
+      </a>
+        <span>A sales dashboard for toyota tools</span>
+        <span class="w3-opacity" id="toyota"></span>
+      </li>
+      <li class="w3-padding-16">
+        <a href='https://github.com/kimbugweronnie/promo-code'>
+        <span class="w3-large">Promo Code API </span><br>
+        </a>
+        <span>A promo code API for SafeBoda</span>
+        <span class="w3-opacity" id="promocode"></span>
+      </li> 
+      <li class="w3-padding-16">
+        <a href='https://github.com/kimbugweronnie/WebClockingApplication'>
+        <span class="w3-large">WebClocking Application</span><br>
+        </a>
+        <span>A clocking tools for employees</span>
+        <span class="w3-opacity" id="webclock"></span>
+      </li>   
+    </ul>
+  </div>
+  <hr> 
+  <script>
+    function seconds_since_epoch(d){ 
+        return Math.floor(d/1000); 
+    }
+    var past_date = new Date(2021, 9, 16, 22, 00, 00, 00);
+    let start = Date.now();
+    let diffrence = (start - past_date)/604800;
+    document.getElementById('start').innerHTML= seconds_since_epoch(diffrence)+' weeks ago';
+      
+    // Driver Code
+    var past_date = new Date(2019, 6, 13, 22, 00, 00, 00);
+    let start1 = Date.now();
+    let toyota_diffrence = (start1 - past_date)/604800;
+    document.getElementById('toyota').innerHTML= seconds_since_epoch(toyota_diffrence)+' weeks ago';
+    
+    
+
+    var past_date = new Date("April 9, 2021 11:13:00");
+    let start2 = Date.now();
+    let promocode_diffrence = (start2 - past_date)/604800;
+    document.getElementById('promocode').innerHTML= seconds_since_epoch(promocode_diffrence)+' weeks ago';;
+    
+    var past_date = new Date("March 10, 2021 11:13:00");
+    let start3 = Date.now();
+    let webclock_diffrence = (start3 - past_date)/604800;
+    document.getElementById('webclock').innerHTML= seconds_since_epoch(webclock_diffrence)+' weeks ago';;
+  </script>
+ 
+  <!-- Labels / tags -->
+  
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Ronnie </a></p>
+</footer>
+
+</body>
+</html>
