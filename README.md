@@ -1,1 +1,1 @@
-# sample-profile
+JS Clinic

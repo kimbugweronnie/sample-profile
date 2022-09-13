@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS Calculator</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="calculator.js"></script>
+</head>
+ 
+<body>
+ <script>
+ 
+ 
+ </script>
+ <div class="container">
+ <form name="form">
+ <div class="display">
+ <input type="text" placeholder="0" name="displayResult" />
+ </div>
+ <div class="buttons">
+   <div class="row">
+ <input type="button" name="ac"  value="AC" onclick="clr(ac.value)" />
+   <input type="button" name="negative" value="-" onClick="calcNumbers(negative.value)">
+   <input type="button" name="modulus" value="%" onClick="calcNumbers(modulus.value)">
+   <input type="button" name="divb" class="red" value="/" onClick="calcNumbers(divb.value)">
+
+ </div>
+ <div class="row">
+    <input type="button" name="b7" class="others" value="7" onClick="calcNumbers(b7.value)">
+      <input type="button" name="b8"  class="others" value="8" onClick="calcNumbers(b8.value)">
+      <input type="button" name="b9" class="others" value="9" onClick="calcNumbers(b9.value)">
+      <input type="button" name="addb" class="red" value="+" onClick="calcNumbers(addb.value)">
+    </div>
+ 
+ <div class="row">
+ <input type="button" name="b4" class="others" value="4" onClick="calcNumbers(b4.value)">
+   <input type="button" name="b5" class="others" value="5" onClick="calcNumbers(b5.value)">
+   <input type="button" name="b6" class="others" value="6" onClick="calcNumbers(b6.value)">
+   <input type="button" name="subb" value="-" class="red" onClick="calcNumbers(subb.value)">
+ </div>
+ 
+ <div class="row">
+ <input type="button" name="b1" class="others" value="1" onClick="calcNumbers(b1.value)">
+   <input type="button" name="b2" class="others" value="2" onClick="calcNumbers(b2.value)">
+   <input type="button" name="b3" class="others" value="3" onClick="calcNumbers(b3.value)">
+   <input type="button" name="mulb" value="*" class="red" onClick="calcNumbers(mulb.value)">
+ </div>
+ 
+ <div class="row">
+ <input type="button" name="b0" class="others" value="0" onClick="calcNumbers(b0.value)">
+   <input type="button" name="potb" class="others" value="." onClick="calcNumbers(potb.value)">
+   <input type="button" name="brackets" class="others" value="()" onClick="calcNumbers(brackets.value)">
+   <input type="button" class="red" value="=" onClick="displayResult.value=getAnswer(displayResult.value)">
+
+ </div>
+ </div>
+ 
+ </form>
+ </div>
+</body>
+ 
+</html>
