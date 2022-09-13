@@ -1,1 +1,1 @@
-JS Clinic
+JS Clinic-Calculator
