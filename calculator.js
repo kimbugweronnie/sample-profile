@@ -3,8 +3,7 @@ function calcNumbers(result){
     
 }
 function getAnswer(result){
-     eval(result);
-    return typeof(result)
+    return eval(result)
 }
 function calcNumbers(result){
     form.displayResult.value=form.displayResult.value+result;
